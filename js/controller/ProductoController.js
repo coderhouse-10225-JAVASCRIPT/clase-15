@@ -1,6 +1,3 @@
-import ProductoModel from '../model/ProductoModel.js';
-import ProductoView from '../view/ProductoView.js';
-
 export default class ProductoController {
     constructor(productoModel, productoView ){
         this.productoModel = productoModel;
@@ -13,5 +10,21 @@ export default class ProductoController {
                 precio: hijos[2].value,
             })
         })
+    }
+
+    cleanView() {
+        $("#app").empty();
+    }
+
+    agregar(){
+
+    }
+
+    buscar() {
+
+    }
+
+    listar(){
+
     }
 }

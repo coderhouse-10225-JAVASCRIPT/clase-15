@@ -5,6 +5,7 @@ import ProductoController from './controller/ProductoController.js';
 import ProductoModel from './model/ProductoModel.js';
 import ProductoView from './view/ProductoView.js';
 import { ErrorComponent } from './components/Error.js';
+import { FavouriteComponent } from './components/Favourite.js'
 import {parseLocation, findActionByPath, routes } from './routes/router.js';
 
 let myApp = $("#app"); // Starting point de un SPA
@@ -42,7 +43,9 @@ const router = () => {
         case "buscar":
             app.buscar("#app")
         break;
-            
+        case "favorito":
+            FavouriteComponent("#app");
+        break;
         default:
             ErrorComponent("#app");
             break;

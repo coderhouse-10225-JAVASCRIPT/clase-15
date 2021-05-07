@@ -1,7 +1,9 @@
 // Desde ES6
 import {} from './events/events.js'; // Carga el archivo y ejecuta todo lo que esta ahi adentro
 import UserProfile from './model/user_profile.js';
-import Producto from './model/producto.js';
+import ProductoController from './controller/ProductoController.js';
+import ProductoModel from './model/ProductoModel.js';
+import ProductoView from './view/ProductoView.js';
 
 let myApp = $("#app"); // Starting point de un SPA
 
@@ -17,3 +19,5 @@ if( myInput.toLowerCase() == "s"){
     myUserProfile.darkmode = true;
     myUserProfile.save();
 }
+
+const app = new ProductoController(new ProductoModel(), new ProductoView());

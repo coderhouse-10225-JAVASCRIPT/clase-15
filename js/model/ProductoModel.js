@@ -1,7 +1,7 @@
-import Producto from "./producto";
+import Producto from "../model/producto.js";
 
 export default class ProductoModel {
-    constuctor() {
+    constructor() {
         const productos = JSON.parse(localStorage.getItem("productos")) || [];
         this.productos = productos.map(producto => new Producto(producto));    
     }
